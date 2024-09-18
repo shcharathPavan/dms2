@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Data</title>
+    <style>
+        /* Style for buttons */
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 15px 25px;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:active {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+<h1>Agricultural Data Collection</h1>
+
+<form id="agriForm">
+    <label for="sensorReading">Sensor Readings (comma-separated):</label>
+    <input type="text" id="sensorReading" required><br><br>
+
+    <label for="cropPhoto">Crop Photo:</label>
+    <input type="file" id="cropPhoto" accept="image/*" required><br><br>
+
+    <label for="farmerNote">Farmer's Note:</label>
+    <textarea id="farmerNote" required></textarea><br><br>
+
+    <label for="gpsCoordinates">GPS Coordinates:</label>
+    <input type="text" id="gpsCoordinates" required><br><br>
+
+    <div class="button-container">
+        <button type="submit">Submit</button>
+        <button type="button" id="displayDataButton">Display Stored Data</button>
+    </div>
+</form>
+
+<div id="storedData"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
